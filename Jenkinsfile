@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'naveenguvvala/simple-node-app'
+        IMAGE_NAME = 'yourdockerhubusername/simple-node-app'
         DOCKER_CREDENTIALS_ID = 'dockerhub-creds'
     }
 
     stages {
-        stage('Clone Code') {
+        stage('Clone Repo') {
             steps {
-                git url: 'https://github.com/NaveenGuvvala/simple-node-app.git'
+                git 'https://github.com/yourusername/simple-node-app.git'
             }
         }
 
